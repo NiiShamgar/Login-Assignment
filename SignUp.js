@@ -3,13 +3,13 @@ import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native'
 
 
 
-export default class LogIn extends Component{
+export default class SignUp extends Component{
     render() {
         return (
             <View style={styles.containers}>
                 
-                <View style={styles.loginTextContainer}>
-                    <Text style={styles.loginText}>Log in</Text>
+                <View style={styles.signUpTextContainer}>
+                    <Text style={styles.SignUpText}>Sign Up</Text>
                 </View>
 
 
@@ -22,23 +22,33 @@ export default class LogIn extends Component{
                     <TextInput 
                         style={styles.input}
                         placeholderTextColor="#aaaaaa"
+                        placeholder="email"/>
+
+                    <TextInput 
+                        style={styles.input}
+                        placeholderTextColor="#aaaaaa"
                         secureTextEntry={true}
                         placeholder="Password"/>
+                    
+
+                    <TextInput 
+                        style={styles.input}
+                        placeholderTextColor="#aaaaaa"
+                        secureTextEntry={true}
+                        placeholder="Confirm Password"/>
                     <Text style={styles.forgotPassword}>Forgot password?</Text>
                 </View>
 
                 
                 <View>
                     <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.loginBtnText}>Log in</Text>
+                        <Text style={styles.SignUpTextBtn}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.noAccountContainer}>
                     <Text style={styles.noAccountText}>Don't have an account?</Text>
-                   <TouchableOpacity>
-                       <Text style={styles.signUpTextBelow}>Sign up </Text>
-                       </TouchableOpacity>
+                    <Text style={styles.signUpText}>Sign up</Text>
         </View>  
             </View>
 
@@ -49,13 +59,13 @@ export default class LogIn extends Component{
 
 const styles=StyleSheet.create({
     containers:{
-       marginHorizontal:40
+       marginHorizontal:50
     },
-     loginText:{
+     signUpText:{
         fontSize:50,
         color:"#7f1491"
     },
-    loginTextContainer:{
+    signUpTextContainer:{
         marginBottom:30
     },
     input:{
@@ -68,10 +78,9 @@ const styles=StyleSheet.create({
     forgotPassword:{
         alignSelf:"flex-end",
         marginVertical:3,
-        color: "#6691ed"
+        color: "#7f1491"
     },
     buttonContainer:{
-        marginVertical:60,
         height:50,
         backgroundColor:"#7f1491",
         justifyContent:"center",
@@ -90,13 +99,12 @@ const styles=StyleSheet.create({
         marginRight:10,
         fontSize:16
     },
-        loginBtnText:{
-        color:"white",
-        fontSize:20
-    },
-    signUpTextBelow:{
+    signUpText:{
         fontSize:16,
-        color:"#6691ed" 
+        color:"#7f1491"
+    },
+    signUpTextBtn:{
+        color:"white"
     },
 
 });
