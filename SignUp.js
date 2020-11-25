@@ -9,7 +9,7 @@ export default class SignUp extends Component{
             <View style={styles.containers}>
                 
                 <View style={styles.signUpTextContainer}>
-                    <Text style={styles.SignUpText}>Sign Up</Text>
+                    <Text style={styles.signUpText}>Sign Up</Text>
                 </View>
 
 
@@ -22,7 +22,7 @@ export default class SignUp extends Component{
                     <TextInput 
                         style={styles.input}
                         placeholderTextColor="#aaaaaa"
-                        placeholder="email"/>
+                        placeholder="Email"/>
 
                     <TextInput 
                         style={styles.input}
@@ -42,13 +42,15 @@ export default class SignUp extends Component{
                 
                 <View>
                     <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.SignUpTextBtn}>Sign Up</Text>
+                        <Text style={styles.signUpTextBtn}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.noAccountContainer}>
                     <Text style={styles.noAccountText}>Don't have an account?</Text>
-                    <Text style={styles.signUpText}>Sign up</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.signUpTextBelow}>Sign up</Text>
+                    </TouchableOpacity>
         </View>  
             </View>
 
@@ -59,10 +61,10 @@ export default class SignUp extends Component{
 
 const styles=StyleSheet.create({
     containers:{
-       marginHorizontal:50
+       marginHorizontal:40
     },
      signUpText:{
-        fontSize:50,
+        fontSize:40,
         color:"#7f1491"
     },
     signUpTextContainer:{
@@ -78,9 +80,10 @@ const styles=StyleSheet.create({
     forgotPassword:{
         alignSelf:"flex-end",
         marginVertical:3,
-        color: "#7f1491"
+        color: "#6691ed"
     },
     buttonContainer:{
+        marginVertical:40,
         height:50,
         backgroundColor:"#7f1491",
         justifyContent:"center",
@@ -99,12 +102,13 @@ const styles=StyleSheet.create({
         marginRight:10,
         fontSize:16
     },
-    signUpText:{
+    signUpTextBelow:{
         fontSize:16,
-        color:"#7f1491"
+        color:"#6691ed"
     },
     signUpTextBtn:{
-        color:"white"
+        color:"white",
+        fontSize:16
     },
 
 });

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, FlatList, TouchableNativeFeedback}  from 'react-native';
-import LogIn from './LogIn';
-
+//import SignUp from './SignUp';
+import ContactsScreen from './ContactsScreen'
+import Contact from './components/Contact'
 
 class App extends Component{
   constructor(props){
@@ -14,7 +15,9 @@ class App extends Component{
   render(){
     return (
       <View style={styles.container}>
-          <LogIn/>  
+        <Text style={styles.nav}>Contact List</Text>
+          <ContactsScreen/> 
+          
       </View>
     );   
   } 
@@ -30,6 +33,10 @@ const styles = StyleSheet.create({
      marginTop:100,
      marginHorizontal:20
   },
+  nav:{
+    fontSize:30,
+    color:"#91a1c2"
+  }
     
  
 });
